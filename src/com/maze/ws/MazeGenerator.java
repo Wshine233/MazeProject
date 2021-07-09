@@ -85,7 +85,8 @@ public class MazeGenerator {
         }
 
         //特判，若障碍密度大于等于30%，则只允许有一个最优路径，否则重新生成
-        if (alpha > 29) {
+        //建议在日常使用时删除
+        if (maze.width == 20 && maze.height == 20 && alpha > 29) {
             solver = new MazeSolver(maze);
             answer = solver.solve();
             if (answer.size() != 1) {

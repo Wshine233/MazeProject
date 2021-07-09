@@ -35,6 +35,7 @@ public class MazeSolver {
             String s = FileHelper.readToString("Maze" + alpha + "_" + i % 2 + ".txt");
             Maze maze = Maze.fromString(s, 0, 0, 19, 19);
             System.out.println("解决迷宫：" + "Maze" + alpha + "_" + i % 2 + ".txt");
+            System.out.println("障碍密度："+maze.countAlpha());
             MazeDebugger.solveMaze(maze);
         }
 
